@@ -1,12 +1,16 @@
-arrNumber = [1,2,3,4,5,6,7,8,9,10];
+num = [2, 4, 6 ,8];
 
-function tafels(arr, tag, num) {
-    for (let i = 0; i < arr.length; i++) {
-        document.getElementById(tag).innerHTML += `${arr[i]} * ${num} = ` + arr[i] * num  + "<br>";
+function tafels(arr) {
+    for (i = 0; i < arr.length; i++) {
+        var title = document.createElement("h2");
+        var table = document.createElement("p");
+        title.innerHTML = `Tafel van ${arr[i]}`;
+        for (x = 1; x <= 10; x++) {
+            table.innerHTML += `${x} * ${arr[i]} = ` + (x * arr[i]) + "<br>"
+        }
+        document.body.appendChild(title);
+        document.body.appendChild(table);
     }
 }
 
-tafels(arrNumber, "two", 2);
-tafels(arrNumber, "four", 4);
-tafels(arrNumber, "six", 6)
-tafels(arrNumber, "eight", 8)
+tafels(num);
