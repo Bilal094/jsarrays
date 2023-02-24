@@ -1,20 +1,18 @@
 var title = document.createElement("h1");
 var arrDisplay = document.createElement("p");
-var numArr = [];
-
+let numArr = [];
 let num = prompt("Voer een getal in:");
 
-for (i = 0; i <= num; i++) {
+for (let i = 0; i <= num; i++) {
     numArr.push(i);
 }
 
-arrDisplay.innerHTML = "Array : " + numArr;
+arrDisplay.innerHTML = "Array : " + numArr + "<br>";
 document.body.appendChild(arrDisplay);
 
-for (i = 0; i <= num; i++) {
-    for (x = 0; x < i; x++) {
+for (let i = 0; i <= num; i++) {
+    for (let x = 0; x <= i; x++) {
         arrDisplay.innerHTML += numArr[x];
     }
-    arrDisplay.innerHTML += "<br>";
-    document.body.appendChild(arrDisplay);
+    arrDisplay.innerHTML += "<br />";
 }
